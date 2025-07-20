@@ -7,7 +7,7 @@ s3_resource = boto3.resource('s3')
 # Create an S3 client object
 s3_client = boto3.client('s3')
 
-# bucket_name = 'testfordevopsbucket'
+bucket_name = 'testfordevopsbucket'
 
 # response = s3_client.create_bucket(
 #     Bucket=bucket_name,)
@@ -28,6 +28,10 @@ for bucket in s3_resource.buckets.all():
     # Print bucket name, creation date, and owner
     print(f"Name: {bucket.name}, Date:{bucket.creation_date}, Owner: {owner}")
     print(f"Items: {bucket.objects.all()}")
+
+print(f"Items in bucket: {bucket_name}")
+for obj in bucket.objects.all():
+    print(f"- {obj.key} ({obj.size} bytes)")
 
 
 
