@@ -14,8 +14,8 @@ bucket_name = 'testfordevopsbucket'
 
 # print(f"Bucket '{bucket_name}' created.")
 
-path = 'cv.docx'
-s3_key = 'cv/mycv.docx'
+# path = 'cv.docx'
+# s3_key = 'cv/mycv.docx'
 
 # List all buckets using the client
 response = s3_client.list_buckets()
@@ -61,6 +61,6 @@ for obj in bucket.objects.all():
 # # delete the bucket itself
 # bucket.delete()
 
-# print(f"✅ Bucket '{bucket.name}' and all its contents deleted.")
+# print(f"✅ Bucket '{bucket.name}' and all its contents deleted."
 
 
